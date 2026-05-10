@@ -1,0 +1,24 @@
+#!name=百度网盘去广告
+#!desc=移除开屏广告、首页卡片广告、传输页面广告、各类弹窗，精简侧拉抽屉和我的页面。
+#!openUrl=https://apps.apple.com/app/id547166701
+#!author=可莉🅥
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/BaiduNetDisk.png
+#!tag=去广告
+#!system=iOS
+
+
+# 百度网盘 - 配置/活动/广告接口
+^https:\/\/pan\.baidu\.com\/api\/getconfig\? url reject-dict
+^https:\/\/pan\.baidu\.com\/api\/getsyscfg\? url reject-dict
+^https:\/\/pan\.baidu\.com\/api\/taskscore\/tasklist\? url reject-dict
+^https:\/\/pan\.baidu\.com\/act\/api\/activityentry\? url reject-dict
+^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/pcs\/adv\? url reject-dict
+^https:\/\/pan\.baidu\.com\/api\/plugin\/get\? url reject-dict
+^https:\/\/pan\.baidu\.com\/recommend\/query\/list\? url reject-dict
+
+# 百度网盘 - 金刚区过滤
+^https:\/\/pan\.baidu\.com\/feed\/kingkongdistrict\? url script-response-body https://raw.githubusercontent.com/JuemingDC/QuantumultX/refs/heads/main/Rewrite/Script/BaiduNet.js
+
+
+hostname = pan.baidu.com
