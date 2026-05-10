@@ -34,6 +34,7 @@ https://raw.githubusercontent.com/JuemingDC/QuantumultX/refs/heads/main/Boxjs/Ch
 | ② | HTTPDNS 拦截器 | Kelee | [BlockHTTPDNS.snippet](https://raw.githubusercontent.com/JuemingDC/QuantumultX/refs/heads/main/Conf/BlockHTTPDNS.snippet) |
 | ③ | 广告平台拦截器 | Kelee | [BlockADs.snippet](https://raw.githubusercontent.com/JuemingDC/QuantumultX/refs/heads/main/Conf/BlockADs.snippet) |
 | ④ | 可莉广告过滤器 | Kelee | [iKeleeADs.snippet](https://raw.githubusercontent.com/JuemingDC/QuantumultX/refs/heads/main/Conf/iKeleeADs.snippet) |
+| ⑤ | 百度网盘去广告 | Kelee | [BaiduNet.snippet](https://raw.githubusercontent.com/JuemingDC/QuantumultX/refs/heads/main/Conf/BaiduNet.snippet) |
 ---
 
 ## 使用提示
