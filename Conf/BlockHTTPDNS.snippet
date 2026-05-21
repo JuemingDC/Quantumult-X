@@ -1,10 +1,8 @@
 #!name=HTTPDNS拦截器
-#!desc=拦截常见 HTTPDNS 服务；Quantumult X 混合 snippet 格式，包含分流规则、重写规则和 MITM hostname。
-#!author=QingRex, Kelee, converted for Quantumult X
-#!source=https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/Beta/HTTPDNS%E6%8B%A6%E6%88%AA%E5%99%A8.beta.sgmodule
-#!date=2026-03-01
+#!desc=拦截常见 HTTPDNS / HTTPSDNS / DoH 请求，使其尽量回落到 Quantumult X DNS 框架。
+#
 
-# ===== Rules =====
+
 host-keyword, httpdns, reject
 host-keyword, httpsdns, reject
 user-agent, httpdns*, reject
@@ -73,86 +71,91 @@ host, hd.xiaojukeji.com, reject
 host, serveraddr.service.kugou.com, reject
 host, twns.p2ptun.qq.com, reject
 host, tp2p.kg.qq.com, reject
+host, httpdns.immomo.com, reject
 
-ip-cidr, 39.156.140.30/32, reject, no-resolve
-ip-cidr, 39.156.140.47/32, reject, no-resolve
-ip-cidr, 39.156.140.245/32, reject, no-resolve
-ip-cidr, 42.81.232.18/32, reject, no-resolve
-ip-cidr, 42.187.182.106/32, reject, no-resolve
-ip-cidr, 42.187.182.123/32, reject, no-resolve
-ip-cidr, 42.187.184.154/32, reject, no-resolve
-ip-cidr, 43.130.30.237/32, reject, no-resolve
-ip-cidr, 43.130.30.240/32, reject, no-resolve
-ip-cidr, 43.137.153.151/32, reject, no-resolve
-ip-cidr, 43.137.159.31/32, reject, no-resolve
-ip-cidr, 43.152.112.101/32, reject, no-resolve
-ip-cidr, 43.153.248.120/32, reject, no-resolve
-ip-cidr, 60.28.172.100/32, reject, no-resolve
-ip-cidr, 61.151.231.157/32, reject, no-resolve
-ip-cidr, 101.32.104.104/32, reject, no-resolve
-ip-cidr, 106.39.206.21/32, reject, no-resolve
-ip-cidr, 106.39.206.25/32, reject, no-resolve
-ip-cidr, 106.39.206.70/32, reject, no-resolve
-ip-cidr, 111.31.201.194/32, reject, no-resolve
-ip-cidr, 111.31.241.76/32, reject, no-resolve
-ip-cidr, 111.31.241.140/32, reject, no-resolve
-ip-cidr, 111.206.147.156/32, reject, no-resolve
-ip-cidr, 111.206.147.210/32, reject, no-resolve
-ip-cidr, 111.206.148.27/32, reject, no-resolve
-ip-cidr, 116.128.177.249/32, reject, no-resolve
-ip-cidr, 116.130.224.150/32, reject, no-resolve
-ip-cidr, 116.130.224.205/32, reject, no-resolve
-ip-cidr, 117.185.247.73/32, reject, no-resolve
-ip-cidr, 123.151.48.171/32, reject, no-resolve
-ip-cidr, 123.151.48.193/32, reject, no-resolve
-ip-cidr, 123.151.48.208/32, reject, no-resolve
-ip-cidr, 123.151.54.50/32, reject, no-resolve
-ip-cidr, 180.153.202.85/32, reject, no-resolve
-ip-cidr, 183.192.196.31/32, reject, no-resolve
-ip-cidr, 203.205.129.102/32, reject, no-resolve
-ip-cidr, 203.205.234.132/32, reject, no-resolve
-ip-cidr, 220.196.159.73/32, reject, no-resolve
-ip-cidr, 203.107.1.0/24, reject, no-resolve
-ip-cidr, 186.76.76.200/32, reject, no-resolve
-ip-cidr, 180.76.76.200/32, reject, no-resolve
-ip-cidr, 101.124.19.122/32, reject, no-resolve
-ip-cidr, 103.224.222.208/32, reject, no-resolve
-ip-cidr, 119.29.29.98/32, reject, no-resolve
-ip-cidr, 119.29.29.99/32, reject, no-resolve
-ip-cidr, 59.111.239.61/32, reject, no-resolve
-ip-cidr, 59.111.239.62/32, reject, no-resolve
-ip-cidr, 115.236.121.51/32, reject, no-resolve
-ip-cidr, 115.236.121.195/32, reject, no-resolve
-ip-cidr, 39.97.130.51/32, reject, no-resolve
-ip-cidr, 39.97.128.148/32, reject, no-resolve
-ip-cidr, 118.89.204.198/23, reject, no-resolve
-ip-cidr, 81.71.61.216/32, reject, no-resolve
+ip-cidr, 39.156.140.30/32, reject
+ip-cidr, 39.156.140.47/32, reject
+ip-cidr, 39.156.140.245/32, reject
+ip-cidr, 42.81.232.18/32, reject
+ip-cidr, 42.187.182.106/32, reject
+ip-cidr, 42.187.182.123/32, reject
+ip-cidr, 42.187.184.154/32, reject
+ip-cidr, 43.130.30.237/32, reject
+ip-cidr, 43.130.30.240/32, reject
+ip-cidr, 43.137.153.151/32, reject
+ip-cidr, 43.137.159.31/32, reject
+ip-cidr, 43.152.112.101/32, reject
+ip-cidr, 43.153.248.120/32, reject
+ip-cidr, 60.28.172.100/32, reject
+ip-cidr, 61.151.231.157/32, reject
+ip-cidr, 101.32.104.104/32, reject
+ip-cidr, 106.39.206.21/32, reject
+ip-cidr, 106.39.206.25/32, reject
+ip-cidr, 106.39.206.70/32, reject
+ip-cidr, 111.31.201.194/32, reject
+ip-cidr, 111.31.241.76/32, reject
+ip-cidr, 111.31.241.140/32, reject
+ip-cidr, 111.206.147.156/32, reject
+ip-cidr, 111.206.147.210/32, reject
+ip-cidr, 111.206.148.27/32, reject
+ip-cidr, 116.128.177.249/32, reject
+ip-cidr, 116.130.224.150/32, reject
+ip-cidr, 116.130.224.205/32, reject
+ip-cidr, 117.185.247.73/32, reject
+ip-cidr, 123.151.48.171/32, reject
+ip-cidr, 123.151.48.193/32, reject
+ip-cidr, 123.151.48.208/32, reject
+ip-cidr, 123.151.54.50/32, reject
+ip-cidr, 180.153.202.85/32, reject
+ip-cidr, 183.192.196.31/32, reject
+ip-cidr, 203.205.129.102/32, reject
+ip-cidr, 203.205.234.132/32, reject
+ip-cidr, 220.196.159.73/32, reject
+ip-cidr, 203.107.1.0/24, reject
+ip-cidr, 186.76.76.200/32, reject
+ip-cidr, 180.76.76.200/32, reject
+ip-cidr, 101.124.19.122/32, reject
+ip-cidr, 103.224.222.208/32, reject
+ip-cidr, 119.29.29.98/32, reject
+ip-cidr, 119.29.29.99/32, reject
+ip-cidr, 59.111.239.61/32, reject
+ip-cidr, 59.111.239.62/32, reject
+ip-cidr, 115.236.121.51/32, reject
+ip-cidr, 115.236.121.195/32, reject
+ip-cidr, 39.97.130.51/32, reject
+ip-cidr, 39.97.128.148/32, reject
+ip-cidr, 103.41.167.237/32, reject
+ip-cidr, 118.89.204.198/32, reject
+ip-cidr, 182.61.194.7/32, reject
+ip-cidr, 81.71.61.216/32, reject
 
-ip6-cidr, 240e:928:1400:10::25/128, reject, no-resolve
-ip6-cidr, 2402:4e00:8030:1::17/128, reject, no-resolve
-ip6-cidr, 2402:4e00:1900:1700:0:9554:1ad9:c3a/128, reject, no-resolve
-ip6-cidr, 2408:8711:10:10::20/128, reject, no-resolve
-ip6-cidr, 2409:8702:4860:10::4d/128, reject, no-resolve
-ip6-cidr, 2402:db40:5100:1011::5/128, reject, no-resolve
-ip6-cidr, 2402:4e00:1200:ed00:0:9089:6dac:96b6/128, reject, no-resolve
+ip6-cidr, 240e:928:1400:10::25/128, reject
+ip6-cidr, 2402:4e00:8030:1::17/128, reject
+ip6-cidr, 2402:4e00:1900:1700:0:9554:1ad9:c3a/128, reject
+ip6-cidr, 2408:8711:10:10::20/128, reject
+ip6-cidr, 2409:8702:4860:10::4d/128, reject
+ip6-cidr, 2402:db40:5100:1011::5/128, reject
+ip6-cidr, 2402:4e00:1200:ed00:0:9089:6dac:96b6/128, reject
+ip6-cidr, 240c:409f:1000::/128, reject
 
-# ===== Rewrite =====
-^http:\/\/((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(?:\/v?[0-9]+)?\/(?:sign_)?(?:(?:d|ss)[46]?|resolve)\? url reject
-^http:\/\/\[[0-9a-fA-F:]+\](?:\/v?[0-9]+)?\/(?:sign_)?(?:(?:d|ss)[46]?|resolve)\? url reject
-^http:\/\/103\.44\.58\.64\/md\? url reject
-^http:\/\/cdn\.wup\.huya\.com\/launch\/queryHttpDns url reject
-^http:\/\/xmc\.ximalaya\.com\/xmlymain-login-web\/login\/ url reject
-^http:\/\/103\.37\.155\.60\/fetch url reject
-^http:\/\/api\.weibo\.cn\/\d+\/httpdns\/config url reject
-^http:\/\/api\.weibo\.cn\/httpdns\/config url reject
-^http:\/\/103\.41\.167\.237\/v2\/resolv url reject
-^http:\/\/((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?):\d+\/httpdns\/ url reject
-^http:\/\/\[[0-9a-fA-F:]+\]:\d+\/httpdns\/ url reject
-^https?:\/\/cdn\.wup\.huya\.com\/monitor\/monitor\.jsp url reject
-^https:\/\/gslbali\.ximalaya\.com\/linkeye-cloud\/httpdns\/ url reject
+
+^http://((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(?:/v?[0-9]+)?/(?:sign_)?(?:(?:d|ss)[46]?|resolve)\? url reject
+^http://\[[0-9a-fA-F:]+\](?:/v?[0-9]+)?/(?:sign_)?(?:(?:d|ss)[46]?|resolve)\? url reject
+^http://103\.44\.58\.64/md\? url reject
+^http://cdn\.wup\.huya\.com/launch/queryHttpDns url reject
+^http://xmc\.ximalaya\.com/xmlymain-login-web/login/ url reject
+^http://103\.37\.155\.60/fetch url reject
+^http://api\.weibo\.cn/\d+/httpdns/config url reject
+^http://api\.weibo\.cn/httpdns/config url reject
+^http:\/\/((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\/v\d\/resolv\? url reject
+^http://((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?):\d+/httpdns/ url reject
+^http://\[[0-9a-fA-F:]+\]:\d+/httpdns/ url reject
+
 ^https?:\/\/appconf\.mail\.163\.com\/mailmaster\/api\/http\/urlConfig\.do$ url reject-dict
+^https?:\/\/cdn\.wup\.huya\.com\/monitor\/monitor\.jsp url reject
 ^https:\/\/msglb\.91160\.com\/msg\/outer\/broker\/get$ url reject-dict
+^https:\/\/gslbali\.ximalaya\.com\/linkeye-cloud\/httpdns\/ url reject
 ^https:\/\/ucdc\d?-upaas\.uc\.cn\/api\/v\d\/dns_query\? url reject-dict
 
-# ===== MITM =====
+
 hostname = appconf.mail.163.com, msglb.91160.com, ucdc2-upaas.uc.cn
