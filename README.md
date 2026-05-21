@@ -32,8 +32,8 @@ https://raw.githubusercontent.com/JuemingDC/QuantumultX/refs/heads/main/Boxjs/Ch
 | 序号 | 名称 | 来源 | 源文件更新日期 | 维护更新日期 | 维护状态 | 资源链接 |
 | :--: | :-- | :--: | :--: | :--: | :--: | :-- |
 | ① | Telegram 重定向 | PandaX | 2026.04.10 | 2026.05.01 | 维护中 | [TelegramRedirect.conf](https://raw.githubusercontent.com/JuemingDC/QuantumultX/refs/heads/main/Conf/Telegram/TelegramRedirect.conf) |
-| ② | HTTPDNS 拦截器 | Kelee | 2026.03.01 | 2026.05.02 | 维护中 | [BlockHTTPDNS.snippet](https://raw.githubusercontent.com/JuemingDC/QuantumultX/refs/heads/main/Conf/BlockHTTPDNS.snippet) |
-| ③ | 广告平台拦截器 | Kelee | 2026.03.03 | 2026.05.03 | 维护中 | [BlockADs.snippet](https://raw.githubusercontent.com/JuemingDC/QuantumultX/refs/heads/main/Conf/BlockADs.snippet) |
+| ② | HTTPDNS 拦截器 | Kelee | 2026.05.17 | 2026.05.21 | 维护中 | [BlockHTTPDNS.snippet](https://raw.githubusercontent.com/JuemingDC/QuantumultX/refs/heads/main/Conf/BlockHTTPDNS.snippet) |
+| ③ | 广告平台拦截器 | Kelee | 2026.05.16 | 2026.05.21 | 维护中 | [BlockADs.snippet](https://raw.githubusercontent.com/JuemingDC/QuantumultX/refs/heads/main/Conf/BlockADs.snippet) |
 | ④ | 可莉广告过滤器 | Kelee | 2025.07.16 | 2026.05.02 | 维护中 | [iKeleeADs.snippet](https://raw.githubusercontent.com/JuemingDC/QuantumultX/refs/heads/main/Conf/iKeleeADs.snippet) |
 | ⑤ | 百度网盘去广告 | Kelee | 2026.01.02 | 2026.05.10 | 维护中 | [BaiduPan.snippet](https://raw.githubusercontent.com/JuemingDC/QuantumultX/refs/heads/main/Conf/BaiduPan.snippet) |
 ---
