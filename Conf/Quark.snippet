@@ -6,10 +6,10 @@
 # homepage: https://hub.kelee.one
 # icon: https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/QuarkBrowser.png
 
-[rewrite_local]
+
 ^https:\/\/stars\.shuqireader\.com\/kkios\/render\/load\/resource\/app$ url reject-dict
 ^https:\/\/stars\.shuqireader\.com\/kkios\/render\/load\/resource\/appConfig$ url reject-dict
 ^https:\/\/open-cms-api\.quark\.cn\/open-cms\? url script-response-body https://raw.githubusercontent.com/JuemingDC/QuantumultX/refs/heads/main/Rewrite/Script/Quark.js
 
-[mitm]
+
 hostname = open-cms-api.quark.cn, stars.shuqireader.com
