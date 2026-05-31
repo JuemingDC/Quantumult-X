@@ -5,7 +5,7 @@
 # homepage: https://hub.kelee.one
 # icon: https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/PinDuoDuo.png
 
-[filter_local]
+
 host, titan.pinduoduo.com, reject
 host, xg.pinduoduo.com, reject
 host, cdl-1.pddpic.com, reject
@@ -20,7 +20,7 @@ host, ta-a.pinduoduo.com, reject
 host, meta.pinduoduo.com, reject
 host, apm-a.pinduoduo.com, reject
 
-[rewrite_local]
+
 ^http://((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)/d(\d)? \r\nUser-Agent:.*com\.xunmeng\.pinduoduo.* url-and-header reject
 ^http://\[[0-9a-fA-F:]+\]/d(\d)?\? \r\nUser-Agent:.*com\.xunmeng\.pinduoduo.* url-and-header reject
 
@@ -53,5 +53,5 @@ host, apm-a.pinduoduo.com, reject
 ^https:\/\/api\.pinduoduo\.com\/order\/ url jsonjq-response-body 'delpaths([["marketing_banner_vo"],["shipping","banner_above_recommend"]])'
 ^https:\/\/api\.pinduoduo\.com\/api\/aristotle\/order_list_v4\? url jsonjq-response-body '.orders|=map(.order_buttons|=map(del(.order_growth_tip)))'
 
-[mitm]
+
 hostname = api.pinduoduo.com
