@@ -567,9 +567,6 @@ static=Final, Proxies, 🎯Direct, 🇭🇰 香港 01, 🇭🇰 香港 02, 🇭�
 
 [server_remote]
 
-[filter_remote]
-
-[rewrite_remote]
 
 [server_local]
 anytls = d32b6cd.ncpokhbf.sbs:20300, password=z84jaX92sN, over-tls=true, tls-host=ixigua.com, fast-open=false, udp-relay=true, tls-verification=false, tag=🇭🇰 香港 01
