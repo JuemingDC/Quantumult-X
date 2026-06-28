@@ -39,7 +39,7 @@ https://raw.githubusercontent.com/JuemingDC/QuantumultX/refs/heads/main/Boxjs/Ch
 | ⑥ | 拼多多去广告 | Kelee | 2026.02.28 | 2026.05.10 | 维护中 | [Pdd.snippet](https://raw.githubusercontent.com/JuemingDC/QuantumultX/refs/heads/main/Conf/Pdd.snippet) |
 | ⑦ | 夸克去广告 | Kelee | 2025.12.29 | 2026.05.10 | 维护中 | [Quark.snippet](https://raw.githubusercontent.com/JuemingDC/QuantumultX/refs/heads/main/Conf/Quark.snippet) |
 | ⑧ | 夸克扫描王去广告 | Kelee | 2026.01.30 | 2026.05.10 | 维护中 | [Quark_scan.snippet](https://raw.githubusercontent.com/JuemingDC/QuantumultX/refs/heads/main/Conf/Quark_scan.snippet) |
-| 9️⃣ | 高德地图去广告 | Kelee | 2026.06.01 | 2026.06.20 | 维护中 | [GDMap.snippet](https://raw.githubusercontent.com/JuemingDC/QuantumultX/refs/heads/main/Conf/GDMap.snippet) |
+| ⑨ | 高德地图去广告 | Kelee | 2026.06.01 | 2026.06.20 | 维护中 | [GDMap.snippet](https://raw.githubusercontent.com/JuemingDC/QuantumultX/refs/heads/main/Conf/GDMap.snippet) |
 ---
 
 </div>
