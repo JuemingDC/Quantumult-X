@@ -161,7 +161,7 @@ ip6-cidr, 240c:409f:1000::/128, reject
 
 #[rewrite_local]
 # > rules.url_regex -> rewrite_local url reject
-^http://((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(?:/v?[0-9]+)?/(?:sign_)?(?:(?:d|ss)[46]?|resolve)\? url reject
+^http://((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(?:/v?[0-9]+)?/(?:sign_)?(?:(?:d|ss)[46]?|resolve)\? url reject-200
 ^http://\[[0-9a-fA-F:]+\](?:/v?[0-9]+)?/(?:sign_)?(?:(?:d|ss)[46]?|resolve)\? url reject
 ^http://103\.44\.58\.64/md\? url reject
 ^http://cdn\.wup\.huya\.com/launch/queryHttpDns url reject
