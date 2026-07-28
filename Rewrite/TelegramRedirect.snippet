@@ -1,0 +1,19 @@
+# ==================================================
+# Name: Telegram 第三方客户端重定向
+# Description: 将 t.me 链接重定向至指定的 Telegram 客户端
+# Author: chance
+# Category: 重写 / URL 重定向
+# Converted: 2026-07-28
+# Target: Quantumult X
+# Script: https://raw.githubusercontent.com/JuemingDC/QuantumultX/main/JavaScript/Telegram/TelegramRedirect.js
+#
+# BoxJs 参数键：telegram_redirect_client
+# 可选值：Telegram / Swiftgram / Turrit / iMe / Nicegram / Lingogram
+# 默认值：Telegram
+# ==================================================
+
+# [rewrite_local]
+^https?:\/\/t\.me\/.+ url script-echo-response https://raw.githubusercontent.com/JuemingDC/QuantumultX/main/JavaScript/Telegram/TelegramRedirect.js
+
+# [mitm]
+hostname = t.me
