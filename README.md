@@ -31,7 +31,7 @@ https://raw.githubusercontent.com/JuemingDC/QuantumultX/refs/heads/main/Boxjs/Ch
 
 | 序号 | 名称 | 来源 | 源文件更新日期 | 维护更新日期 | 维护状态 | 资源链接 |
 | :--: | :-- | :--: | :--: | :--: | :--: | :-- |
-| ① | Telegram 重定向 | PandaX | 2026.04.10 | 2026.05.01 | 维护中 | [TelegramRedirect.conf](https://raw.githubusercontent.com/JuemingDC/QuantumultX/refs/heads/main/Conf/Telegram/TelegramRedirect.conf) |
+| ① | Telegram 重定向 | PandaX | 2026.04.10 | 2026.05.01 | 维护中 | [TelegramRedirect.snippet](https://raw.githubusercontent.com/JuemingDC/QuantumultX/refs/heads/main/Rewrite/TelegramRedirect.snippet) |
 
 ---
 
