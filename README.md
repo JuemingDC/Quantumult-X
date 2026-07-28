@@ -32,14 +32,7 @@ https://raw.githubusercontent.com/JuemingDC/QuantumultX/refs/heads/main/Boxjs/Ch
 | 序号 | 名称 | 来源 | 源文件更新日期 | 维护更新日期 | 维护状态 | 资源链接 |
 | :--: | :-- | :--: | :--: | :--: | :--: | :-- |
 | ① | Telegram 重定向 | PandaX | 2026.04.10 | 2026.05.01 | 维护中 | [TelegramRedirect.conf](https://raw.githubusercontent.com/JuemingDC/QuantumultX/refs/heads/main/Conf/Telegram/TelegramRedirect.conf) |
-| ② | HTTPDNS 拦截器 | Kelee | 2026.06.15 | 2026.06.16 | 维护中 | [BlockHTTPDNS.snippet](https://raw.githubusercontent.com/JuemingDC/QuantumultX/refs/heads/main/Conf/BlockHTTPDNS.snippet) |
-| ③ | 广告平台拦截器 | Kelee | 2026.05.16 | 2026.05.21 | 维护中 | [BlockADs.snippet](https://raw.githubusercontent.com/JuemingDC/QuantumultX/refs/heads/main/Conf/BlockADs.snippet) |
-| ④ | 可莉广告过滤器 | Kelee | 2025.07.16 | 2026.05.02 | 维护中 | [iKeleeADs.snippet](https://raw.githubusercontent.com/JuemingDC/QuantumultX/refs/heads/main/Conf/iKeleeADs.snippet) |
-| ⑤ | 百度网盘去广告 | Kelee | 2026.01.02 | 2026.05.10 | 维护中 | [BaiduPan.snippet](https://raw.githubusercontent.com/JuemingDC/QuantumultX/refs/heads/main/Conf/BaiduPan.snippet) |
-| ⑥ | 拼多多去广告 | Kelee | 2026.02.28 | 2026.05.10 | 维护中 | [Pdd.snippet](https://raw.githubusercontent.com/JuemingDC/QuantumultX/refs/heads/main/Conf/Pdd.snippet) |
-| ⑦ | 夸克去广告 | Kelee | 2025.12.29 | 2026.05.10 | 维护中 | [Quark.snippet](https://raw.githubusercontent.com/JuemingDC/QuantumultX/refs/heads/main/Conf/Quark.snippet) |
-| ⑧ | 夸克扫描王去广告 | Kelee | 2026.01.30 | 2026.05.10 | 维护中 | [Quark_scan.snippet](https://raw.githubusercontent.com/JuemingDC/QuantumultX/refs/heads/main/Conf/Quark_scan.snippet) |
-| ⑨ | 高德地图去广告 | Kelee | 2026.06.01 | 2026.06.20 | 维护中 | [GDMap.snippet](https://raw.githubusercontent.com/JuemingDC/QuantumultX/refs/heads/main/Conf/GDMap.snippet) |
+
 ---
 
 </div>
